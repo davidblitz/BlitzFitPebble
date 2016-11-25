@@ -1,19 +1,27 @@
 #include <pebble.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 static Window *s_window;
 static TextLayer *s_text_layer;
-static TextLayer *s_prog_layer; //Layer for the Progress Bar
 
+static char s_activity[12] = "Running";
+  
 static void init(void) {
 	// Create a window and get information about the window
 	s_window = window_create();
   Layer *window_layer = window_get_root_layer(s_window);
   GRect bounds = layer_get_bounds(window_layer);
-	
+	char *final_string = "";
+  
   //ACTIVITY
   // Create a text layer and set the text
 	s_text_layer = text_layer_create(bounds);
-	text_layer_set_text(s_text_layer, "Running\n[##___]_%40");
+  
+  strcat(final_string, s_activity);
+  strcat(final_string, "[###__]%40");
+  
+  text_layer_set_text(s_text_layer, final_string);
   
   // Set the font and text alignment
 	text_layer_set_font(s_text_layer, fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD));
