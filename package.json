@@ -1,0 +1,21 @@
+{
+    "author": "dmickisch@gmail.com",
+    "dependencies": {},
+    "keywords": [],
+    "name": "blitzfitpebble",
+    "pebble": {
+        "displayName": "BlitzFitPebble",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "uuid": "78332f38-ab5e-4255-baa4-f7279aa995b2",
+        "watchapp": {
+            "watchface": false
+        }
+    },
+    "version": "1.0.0"
+}
