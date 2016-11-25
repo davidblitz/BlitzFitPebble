@@ -12,14 +12,17 @@ static void init(void) {
 	s_window = window_create();
   Layer *window_layer = window_get_root_layer(s_window);
   GRect bounds = layer_get_bounds(window_layer);
-	char *final_string = "";
+	char final_string[100] = "";
   
   //ACTIVITY
   // Create a text layer and set the text
 	s_text_layer = text_layer_create(bounds);
   
   strcat(final_string, s_activity);
-  strcat(final_string, "[###__]%40");
+  strcat(final_string, "\n");
+  strcat(final_string, "[+++--]");
+  strcat(final_string, "\n");
+  strcat(final_string, "40%");
   
   text_layer_set_text(s_text_layer, final_string);
   
