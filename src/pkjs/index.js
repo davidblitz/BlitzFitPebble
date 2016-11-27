@@ -1,3 +1,5 @@
+var sio = require("socket.io-client");
+
 Pebble.addEventListener('ready', function() {
   // PebbleKit JS is ready!
   console.log('PebbleKit JS ready!');
@@ -20,5 +22,10 @@ Pebble.addEventListener('appmessage',
     }
     
     console.log('AppMessage received - ActivityDone =  ' + dict['ActivityDone']);
+    
+    var socket = sio('https://young-mesa-30289.herokuapp.com/');
+    socket.send('DONE');
+    
+    console.log('Sent DONE signal to server');
   }                     
 );

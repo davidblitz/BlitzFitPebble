@@ -8,7 +8,7 @@ static TextLayer *s_text_layer;
 
 static char s_activity[12] = "Running";
 static float prog = 0.0;
-static int prog_resolution = 12;
+static int prog_resolution = 10;
 static char final_string[100] = "";
 static char progress_string[50] = "";
 static bool inProgress = false;

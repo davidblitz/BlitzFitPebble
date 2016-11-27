@@ -1,6 +1,8 @@
 {
     "author": "dmickisch@gmail.com",
-    "dependencies": {},
+    "dependencies": {
+        "socket.io-client": "^1.5.0"
+    },
     "keywords": [],
     "name": "blitzfitpebble",
     "pebble": {
@@ -17,8 +19,6 @@
         },
         "sdkVersion": "3",
         "targetPlatforms": [
-            "aplite",
-            "basalt",
             "chalk"
         ],
         "uuid": "78332f38-ab5e-4255-baa4-f7279aa995b2",
